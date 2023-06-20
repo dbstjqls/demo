@@ -3,11 +3,8 @@ package com.example.demo.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-
 import org.hibernate.annotations.GenericGenerator;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,7 +16,6 @@ import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Table(name = "Todo")
-@NamedQuery(name="TodoRepository.searchByUserId", query = "select t from TodoEntity t where t.uwerId = ?1")
 public class TodoEntity {
 	@Id
 	@GeneratedValue(generator="system-uuid")  // 자동으로 id 생성
@@ -29,3 +25,4 @@ public class TodoEntity {
 	private String title;
 	private boolean done;
 }
+// 변경사항 없음
