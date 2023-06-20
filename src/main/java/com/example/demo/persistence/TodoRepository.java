@@ -10,3 +10,5 @@ import com.example.demo.model.*;
 public interface TodoRepository extends JpaRepository<TodoEntity,String> {
 	List<TodoEntity>findByUserId(String userId);
 }
+
+// 변경 사항 없음
